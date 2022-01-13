@@ -1,5 +1,5 @@
-import { prisma } from '../../../../shared/infra/prisma/';
-import { hash } from 'bcryptjs';
+import { prisma } from '../../../../shared/infra/prisma';
+import { hash } from 'bcrypt';
 
 interface IRequest {
   username: string;
