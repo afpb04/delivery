@@ -7,12 +7,9 @@ export class AuthenticateClientController {
 
     const authenticateClientUseCase = new AuthenticateClientUseCase();
 
-    try {
-      const auth = await authenticateClientUseCase.execute({ username, password });
+    const auth = await authenticateClientUseCase.execute({ username, password });
 
-      return response.json({ success: true, auth });
-    } catch (err: any) {
-      return response.status(400).json({ success: false, message: err.message })
-    }
+    return response.json({ success: true, auth });
+
   }
 }
