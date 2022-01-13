@@ -3,12 +3,12 @@ import { sign } from 'jsonwebtoken';
 import { prisma } from '../../../../shared/infra/prisma/';
 
 interface IRequest {
-  username: string,
-  password: string,
+  username: string;
+  password: string;
 }
 interface IResponse {
-  username: string,
-  token: string
+  username: string;
+  token: string;
 }
 
 export class AuthenticateClientUseCase {
